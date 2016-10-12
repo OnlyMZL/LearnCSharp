@@ -10,7 +10,9 @@ namespace test
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("This a test project.");
+            Console.WriteLine("I change it.");
             Console.Read();
 
         }
