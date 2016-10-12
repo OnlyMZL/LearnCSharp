@@ -14,6 +14,8 @@ namespace test
             Console.WriteLine("This a test project.");
             Console.WriteLine("I change it.");
             Console.WriteLine("I change my username.");
+
+            Console.Write("签入 签出");
             Console.Read();
 
         }
