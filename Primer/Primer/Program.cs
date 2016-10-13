@@ -35,8 +35,7 @@ namespace Primer
         {
             return "Name:"+Name+"\nVal:"+Val;
         }
-
-
+        
         private MyClass(string newName)
         {
             Name = newName;
@@ -45,8 +44,7 @@ namespace Primer
         private MyClass() : this("Default Name")
         { }
 
-
-
+        
         //(4)
         static void Main(string[] args)
         {
