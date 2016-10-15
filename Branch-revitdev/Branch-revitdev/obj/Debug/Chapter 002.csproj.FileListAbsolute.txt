@@ -1,4 +1,0 @@
-E:\GithubRepo\Branch-revitdev\Branch-revitdev\bin\Debug\Branch-revitdev.dll
-E:\GithubRepo\Branch-revitdev\Branch-revitdev\bin\Debug\Branch-revitdev.pdb
-E:\GithubRepo\Branch-revitdev\Branch-revitdev\obj\Debug\Branch-revitdev.dll
-E:\GithubRepo\Branch-revitdev\Branch-revitdev\obj\Debug\Branch-revitdev.pdb
