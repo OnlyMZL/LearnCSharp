@@ -24,14 +24,22 @@ namespace Branch_revitdev
             //Document doc = uiDoc.Document;
 
             //*****************************************************************
+            //************2-22：使用Assimilate方法********************************
+            //*****************************************************************
+
+
+
+
+
+            //*****************************************************************
             //************2-21：使用事务创建元素********************************
             //*****************************************************************
-            UIApplication uiApp = commandData.Application;
-            
-            //调用CreatingSketch方法
-            CreatingSketch(uiApp);
+            //UIApplication uiApp = commandData.Application;
 
-            return Result.Succeeded;
+            ////调用CreatingSketch方法
+            //CreatingSketch(uiApp);
+
+            //return Result.Succeeded;
 
 
             //*****************************************************************
