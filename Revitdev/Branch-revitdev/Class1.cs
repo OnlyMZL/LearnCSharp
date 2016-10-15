@@ -214,5 +214,42 @@ namespace Branch_revitdev
             }
         }
         #endregion
+
+        //CreateLevle方法
+        public bool CreateLevel(Document document, double elevation)
+        {
+            using (Transaction trans = new Transaction(document, "Create level"))
+            {
+                if (trans.Start() == TransactionStatus.Started)
+                {
+                    if (null != document.Create.NewLevel(elevation))
+                    {
+                        return true;
+                    }
+                }
+                else
+                    trans.RollBack();
+            }
+            return false;
+        }
+
+        //CreateGrid方法
+        public bool CreateGrid(Document document, XYZ p1, XYZ p2)
+        {
+            using (Transaction trans = new Transaction(document, "Create grid"))
+            {
+                if (trans.Commit() == TransactionStatus.Started)
+                {
+                    Line gridLine = Line.CreateBound(p1, p2);
+                    if ((null != gridLine) && (null != document.Create.NewGrid(gridLine)))
+                    {
+                        return true;
+                    }
+                }
+                else
+                    trans.RollBack();
+            }
+            return false;
+        }
     }
 }
