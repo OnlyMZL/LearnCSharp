@@ -23,22 +23,15 @@ namespace Branch_revitdev
             //UIDocument uiDoc = uiApp.ActiveUIDocument;
             //Document doc = uiDoc.Document;
 
-
-
-
-
-
-
-
             //*****************************************************************
             //************2-21：使用事务创建元素********************************
             //*****************************************************************
-            //UIApplication uiApp = commandData.Application;
+            UIApplication uiApp = commandData.Application;
             
-            ////调用CreatingSketch方法
-            //CreatingSketch(uiApp);
+            //调用CreatingSketch方法
+            CreatingSketch(uiApp);
 
-            //return Result.Succeeded;
+            return Result.Succeeded;
 
 
             //*****************************************************************
@@ -213,14 +206,5 @@ namespace Branch_revitdev
             }
         }
         #endregion
-
-        #region
-        public bool CreateLevel(Document document, double elevation) 
-
-
-
-
-        #endregion
-
     }
 }
