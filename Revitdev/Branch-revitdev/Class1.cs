@@ -14,8 +14,8 @@ namespace Branch_revitdev
     [Transaction(TransactionMode.Manual)]
     public class Class1:IExternalCommand
     {
-        public Result Execute(ExternalCommandData commandData, 
-                              ref string message, 
+        public Result Execute(ExternalCommandData commandData,
+                              ref string message,
                               ElementSet elements)
         {
             //UIApplication uiApp = commandData.Application;
@@ -26,8 +26,12 @@ namespace Branch_revitdev
             //*****************************************************************
             //************2-22：使用Assimilate方法********************************
             //*****************************************************************
-
-
+            UIApplication uiApp = commandData.Application;
+            Application app = uiApp.Application;
+            UIDocument uiDoc = uiApp.ActiveUIDocument;
+            Document doc = uiDoc.Document;
+            CompoundOperation(doc);
+            return Result.Succeeded;
 
 
 
@@ -224,7 +228,7 @@ namespace Branch_revitdev
                 {
                     if (null != document.Create.NewLevel(elevation))
                     {
-                        return true;
+                        return (trans.Commit()==TransactionStatus.Committed);
                     }
                 }
                 else
@@ -243,13 +247,30 @@ namespace Branch_revitdev
                     Line gridLine = Line.CreateBound(p1, p2);
                     if ((null != gridLine) && (null != document.Create.NewGrid(gridLine)))
                     {
-                        return true;
+                        return (trans.Commit() == TransactionStatus.Committed);
                     }
                 }
                 else
                     trans.RollBack();
             }
             return false;
+        }
+
+        //CompoundOperation方法
+        public void CompoundOperation(Document doc)
+        {
+            using (TransactionGroup transGroup = new TransactionGroup(doc, "Level and Grid"))
+            {
+                if (transGroup.Start() == TransactionStatus.Started)
+                {
+                    if (CreateLevel(doc, 25) && CreateGrid(doc, new XYZ(0, 0, 0), new XYZ(10, 0, 0)))
+                    {
+                        transGroup.Assimilate();
+                    }
+                }
+                else
+                    transGroup.RollBack();
+            }
         }
     }
 }
