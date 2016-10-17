@@ -8,6 +8,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.Attributes;
 using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
+using Autodesk.Revit.UI.Selection;
 
 namespace Branch_revitdev
 {
@@ -22,16 +23,114 @@ namespace Branch_revitdev
             //Application app = uiApp.Application;
             //UIDocument uiDoc = uiApp.ActiveUIDocument;
             //Document doc = uiDoc.Document;
-
             //*****************************************************************
-            //************2-22：使用Assimilate方法********************************
+            //************2-30：通过过滤器取到元素********************************
             //*****************************************************************
             UIApplication uiApp = commandData.Application;
             Application app = uiApp.Application;
             UIDocument uiDoc = uiApp.ActiveUIDocument;
             Document doc = uiDoc.Document;
-            CompoundOperation(doc);
+            try
+            {
+                //创建一个类过滤器，取得FamilyInstance
+                ElementClassFilter elementClassFilter = new ElementClassFilter(typeof(FamilyInstance));
+                //创建一个类别过滤器，取得BuiltInCategory为OST_Door的元素
+                ElementCategoryFilter elementCategoryFilter = new ElementCategoryFilter(BuiltInCategory.OST_Doors);
+                //创建一个逻辑过滤器，取得所有的Door元素
+                LogicalAndFilter elementLogicalFilter = new LogicalAndFilter(elementClassFilter,elementCategoryFilter);
+                FilteredElementCollector collector = new FilteredElementCollector(doc);
+                ICollection<Element> doors = collector.WherePasses(elementLogicalFilter).ToElements();
+                string info = "Doors' name:";
+                foreach (Element door in doors)
+                {
+                    info += "\t\n"+door.Name.ToString();
+                }
+                TaskDialog.Show("Filter", info);
+            }
+            catch (Exception e)
+            {
+                message = e.Message;
+                return Result.Failed;
+            }
             return Result.Succeeded;
+
+
+
+
+
+            //*****************************************************************
+            //************2-29：在外部命令运行过程中选择元素********************************
+            //*****************************************************************
+            //UIApplication uiApp = commandData.Application;
+            //Application app = uiApp.Application;
+            //UIDocument uiDoc = uiApp.ActiveUIDocument;
+            //Document doc = uiDoc.Document;
+            //try
+            //{
+            //    Reference pickedElemRef = uiDoc.Selection.PickObject(ObjectType.Element);
+            //    Element elem = uiDoc.Document.GetElement(pickedElemRef);
+            //    string info = "The picked element type is: \t\n" + elem.GetType().ToString();
+            //    TaskDialog.Show("Selection", info);
+            //}
+            //catch (Exception e)
+            //{
+            //    message = e.Message;
+            //    return Result.Failed;
+            //}
+            //return Result.Succeeded;
+
+
+
+
+            //*****************************************************************
+            //************2-22：使用Assimilate方法********************************
+            //*****************************************************************
+            //UIApplication uiApp = commandData.Application;
+            //Application app = uiApp.Application;
+            //UIDocument uiDoc = uiApp.ActiveUIDocument;
+            //Document doc = uiDoc.Document;
+            //CompoundOperation(doc);
+            //return Result.Succeeded;
+
+
+
+
+            //********************************************************************
+            //************2-28：先选择元素后执行命令********************************
+            //*********************************************************************
+            //UIApplication uiApp = commandData.Application;
+            //Application app = uiApp.Application;
+            //UIDocument uiDoc = uiApp.ActiveUIDocument;
+            //Document doc = uiDoc.Document;
+            //try
+            //{
+            //    //在执行此命令之前，先选择一些元素。
+            //    Selection selectionElems = uiDoc.Selection;
+            //    ElementSet elemsCollection = selectionElems.Elements;
+            //    if (elemsCollection.Size == 0)
+            //    {
+            //        TaskDialog.Show("Warning", "Please pick some objections.");
+            //    }
+            //    else
+            //    {
+            //        string info = "The elements you have picked are:";
+            //        foreach (Element elem in elemsCollection)
+            //        {
+            //            info += "\t\n"+elem.GetType().ToString();
+            //        }
+            //        TaskDialog.Show("Selections",info);
+            //    }
+            //}
+            //catch(Exception e)
+            //{
+            //    message = e.Message;
+            //    return Result.Failed;
+            //}
+            //return Result.Succeeded;
+
+
+
+
 
 
 
