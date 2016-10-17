@@ -224,15 +224,16 @@ namespace Branch_revitdev
         {
             using (Transaction trans = new Transaction(document, "Create level"))
             {
-                if (trans.Start() == TransactionStatus.Started)
+                if (TransactionStatus.Started == trans.Start())
                 {
                     if (null != document.Create.NewLevel(elevation))
                     {
-                        return (trans.Commit()==TransactionStatus.Committed);
+                        return (TransactionStatus.Committed==trans.Commit());
                     }
-                }
-                else
                     trans.RollBack();
+
+                }
+
             }
             return false;
         }
@@ -242,16 +243,17 @@ namespace Branch_revitdev
         {
             using (Transaction trans = new Transaction(document, "Create grid"))
             {
-                if (trans.Commit() == TransactionStatus.Started)
+                if (trans.Start() == TransactionStatus.Started)
                 {
                     Line gridLine = Line.CreateBound(p1, p2);
                     if ((null != gridLine) && (null != document.Create.NewGrid(gridLine)))
                     {
-                        return (trans.Commit() == TransactionStatus.Committed);
+                       return (trans.Commit() == TransactionStatus.Committed);
                     }
-                }
-                else
                     trans.RollBack();
+
+                }
+
             }
             return false;
         }
