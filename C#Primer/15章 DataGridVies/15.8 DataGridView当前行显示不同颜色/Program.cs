@@ -4,8 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace _15._7_DataGridView直接修改数据
+namespace _15._8_DataGridView当前行显示不同颜色
 {
     static class Program
     {
