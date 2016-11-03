@@ -63,8 +63,19 @@ namespace _15_while练习
             //2006年培养学员80000人，每年增长25%，
             //请问按此增长速度，到哪一年培训学员人数将达到20万人？
 
+            //声明变量   学员数量  年 
+            //循环体： 学院数量*（1.25）^年
+            //循环条件： 学院数量>20万
 
-
+            double year = 0;
+            double num = 80000;
+            while (num<200000)
+            {
+                year++;
+                num = num * Math.Pow(1.25,year);
+            }
+            Console.WriteLine(year);
+            Console.ReadLine();
             #endregion
 
 
