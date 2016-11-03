@@ -58,7 +58,7 @@ namespace _15_while练习
 
             #endregion
 
-            #region
+            #region 练习3
 
             //2006年培养学员80000人，每年增长25%，
             //请问按此增长速度，到哪一年培训学员人数将达到20万人？
@@ -71,8 +71,8 @@ namespace _15_while练习
             double num = 80000;
             while (num<200000)
             {
+                num *= 1.25;
                 year++;
-                num = num * Math.Pow(1.25,year);
             }
             Console.WriteLine(year);
             Console.ReadLine();
