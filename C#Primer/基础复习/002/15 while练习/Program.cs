@@ -45,15 +45,20 @@ namespace _15_while练习
 
             //string answer = "no";
             //int i = 0;
-            //while (i<10)
+            //while (answer == "no" && i < 10)
             //{
-            //    Console.WriteLine("会做了吗？ yes/no");
+            //    Console.WriteLine("第{0}遍讲，会做了吗？ yes/no", i + 1);
             //    answer = Console.ReadLine();
             //    i++;
             //    if (answer == "yes")
-            //        break;
+            //    {
+            //        Console.WriteLine("会了就放学！！");
+            //    }
             //}
-            //Console.WriteLine("放学");
+            //if (answer == "no" && i >= 10)
+            //{
+            //    Console.WriteLine("不会也放学！！");
+            //}
             //Console.Read();
 
             #endregion
@@ -68,13 +73,14 @@ namespace _15_while练习
             //循环条件： 学院数量>20万
 
             double year = 0;
+            
             double num = 80000;
-            while (num<200000)
+            while (num < 200000)
             {
                 num *= 1.25;
                 year++;
             }
-            Console.WriteLine(year);
+            Console.WriteLine(year+2006);
             Console.ReadLine();
             #endregion
 

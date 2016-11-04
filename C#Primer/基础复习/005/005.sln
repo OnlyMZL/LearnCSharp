@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 for循环正序和倒序输出", "04 for循环正序和倒序输出\04 for循环正序和倒序输出.csproj", "{57F0F52D-0B08-45F6-8350-E1817AA67887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 for循环练习", "05 for循环练习\05 for循环练习.csproj", "{8B42D715-C861-463C-AB61-D0088C705632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 乘法口诀", "06 乘法口诀\06 乘法口诀.csproj", "{EA947299-C9CD-4AF3-832D-9AB55176A930}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57F0F52D-0B08-45F6-8350-E1817AA67887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F0F52D-0B08-45F6-8350-E1817AA67887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F0F52D-0B08-45F6-8350-E1817AA67887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F0F52D-0B08-45F6-8350-E1817AA67887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B42D715-C861-463C-AB61-D0088C705632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B42D715-C861-463C-AB61-D0088C705632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B42D715-C861-463C-AB61-D0088C705632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B42D715-C861-463C-AB61-D0088C705632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA947299-C9CD-4AF3-832D-9AB55176A930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA947299-C9CD-4AF3-832D-9AB55176A930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA947299-C9CD-4AF3-832D-9AB55176A930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA947299-C9CD-4AF3-832D-9AB55176A930}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
