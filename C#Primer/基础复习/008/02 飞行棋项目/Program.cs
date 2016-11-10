@@ -14,8 +14,8 @@ namespace _02_飞行棋项目
         static int[] PlayerPos = new int[2];
         //声明一个静态数组来存储玩家A跟玩家B的名字
         static string[] PlayerNames = new string[2];
-        //声明一个整型标记玩家玩游戏的顺序
-        int flag = 0;
+        //声明一个bool标记玩家玩游戏的顺序
+        static bool[] flag = new bool[2];
 
         static void Main(string[] args)
         {
@@ -59,32 +59,31 @@ namespace _02_飞行棋项目
             Console.ReadKey(true);
             Console.Clear();
             DrawMap();
-            for (int flag = 0; PlayerPos[flag % 2] < 99; flag++)
+            //开始玩游戏
+            while (PlayerPos[0] < 99 && PlayerPos[1] < 99)
             {
-                //玩家A玩游戏
-                if (flag % 2 == 0)
+                if (flag[0] == false)
                 {
                     PlayGame(0);
                     Console.Clear();
                     DrawMap();
-                    if (WonGame())
-                    {
-                        break;
-                    }
                 }
-
-                //玩家B玩游戏
-                else if(flag % 2 == 1)
+                else
+                {
+                    flag[0] = false;
+                }
+                if (flag[1] == false)
                 {
                     PlayGame(1);
                     Console.Clear();
                     DrawMap();
-                    if (WonGame())
-                    {
-                        break;
-                    }
+                }
+                else
+                {
+                    flag[1] = false;
                 }
             }
+            Won();
             Console.ReadKey();
         }
 
@@ -268,15 +267,21 @@ namespace _02_飞行棋项目
             Console.ReadKey(true);
             PlayerPos[i] += r;
             PosChange(i);
-            WonGame();
+            //判断当前玩家是否赢得了比赛
+            if (PlayerPos[i] == 99)
+            {
+                Console.Clear();
+                DrawMap();
+                return;
+            }
             switch (Maps[PlayerPos[i]])
             {
                 case 0:
-                    Console.WriteLine("{0}踩到了方块，安全。", PlayerNames[i]);
+                    Console.WriteLine("{0}行动完了，踩到了方块，安全。", PlayerNames[i]);
                     Console.ReadKey(true);
                     break;
                 case 1:
-                    Console.WriteLine("{0}踩到了幸运轮盘，请选择： 1--与对手交换位置  2--轰炸对手（对手退六格）", PlayerNames[i]);
+                    Console.WriteLine("{0}行动完了，踩到了幸运轮盘，请选择： 1--与对手交换位置  2--轰炸对手（对手退六格）", PlayerNames[i]);
                     string s = Console.ReadLine();
                     int temp;
                     while (!(s == "1") && !(s == "2"))
@@ -300,26 +305,24 @@ namespace _02_飞行棋项目
                     }
                     break;
                 case 2:
-                    Console.WriteLine("{0}踩到了地雷，退6格", PlayerNames[i]);
+                    Console.WriteLine("{0}行动完了，踩到了地雷，退6格", PlayerNames[i]);
                     PlayerPos[i] -= 6;
                     Console.ReadKey(true);
                     break;
                 case 3:
-                    Console.WriteLine("{0}踩到了暂停，暂停一轮游戏", PlayerNames[i]);
+                    Console.WriteLine("{0}行动完了，踩到了暂停，暂停一轮游戏", PlayerNames[i]);
                     Console.ReadKey(true);
-                    Console.Clear();
-                    DrawMap();
-                    PlayGame(1 - i);
+                    flag[i] = !flag[i];
                     break;
                 case 4:
-                    Console.WriteLine("{0}踩到了时空隧道，前进10格", PlayerNames[i]);
+                    Console.WriteLine("{0}行动完了，踩到了时空隧道，前进10格", PlayerNames[i]);
                     PlayerPos[i] += 10;
                     Console.ReadKey(true);
                     break;
             }//switch
             //玩家位置超出地图的处理
             PosChange(i);
-            WonGame();
+
         }//方法
 
 
@@ -348,37 +351,23 @@ namespace _02_飞行棋项目
         }
 
 
-
         /// <summary>
-        /// 判断玩家是否赢了游戏
+        /// 判读哪位玩家赢得了比赛
         /// </summary>
-        /// <returns>返回bool值</returns>
-        public static bool WonGame()
+        public static void Won()
         {
             if (PlayerPos[0] == 99)
             {
-                Console.Clear();
-                DrawMap();
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("玩家{0}无耻地赢了玩家{1}，游戏结束", PlayerNames[0], PlayerNames[1]);
-                Console.ReadKey(true);
-                Console.ResetColor();
-                return true;
+                Console.WriteLine("玩家A无耻地赢了玩家B！！");
             }
-            else if (PlayerPos[1] == 99)
+            if (PlayerPos[1] == 99)
             {
-                Console.Clear();
-                DrawMap();
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("玩家{0}无耻地赢了玩家{1}，游戏结束", PlayerNames[1], PlayerNames[0]);
-                Console.ReadKey(true);
-                return true;
-            }
-            else
-            {
-                return false;
+                Console.WriteLine("玩家B无耻地赢了玩家A！！");
             }
         }
+
 
     }
 }
