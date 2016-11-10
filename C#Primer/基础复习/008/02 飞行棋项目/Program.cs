@@ -59,7 +59,7 @@ namespace _02_飞行棋项目
             Console.ReadKey(true);
             Console.Clear();
             DrawMap();
-            //开始玩游戏
+            #region 玩家轮流玩游戏
             while (PlayerPos[0] < 99 && PlayerPos[1] < 99)
             {
                 if (flag[0] == false)
@@ -83,6 +83,7 @@ namespace _02_飞行棋项目
                     flag[1] = false;
                 }
             }
+            #endregion
             Won();
             Console.ReadKey();
         }
