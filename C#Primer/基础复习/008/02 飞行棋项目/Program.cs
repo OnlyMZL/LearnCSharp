@@ -282,7 +282,7 @@ namespace _02_飞行棋项目
                     Console.ReadKey(true);
                     break;
                 case 1:
-                    Console.WriteLine("{0}行动完了，踩到了幸运轮盘，请选择： 1--与对手交换位置  2--轰炸对手（对手退六格）", PlayerNames[i]);
+                    Console.WriteLine("{0}行动完了，踩到了幸运轮盘，请选择：\n 1--与对手交换位置  2--轰炸对手（对手退六格）", PlayerNames[i]);
                     string s = Console.ReadLine();
                     int temp;
                     while (!(s == "1") && !(s == "2"))
