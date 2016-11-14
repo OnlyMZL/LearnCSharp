@@ -21,7 +21,6 @@ namespace _10_继承练习
                 _name = value;
             }
         }
-
         private int _age;
         public int Age
         {
@@ -48,7 +47,11 @@ namespace _10_继承练习
                 _gender = value;
             }
         }
-
-        
+        public Person(string name, char gender, int age)
+        {
+            this.Name = name;
+            this.Gender = gender;
+            this.Age = age;
+        }
     }
 }
