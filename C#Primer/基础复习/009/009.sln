@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10 继承练习", "10 继承练习\10 继承练习.csproj", "{A1255502-E460-4B47-9052-9EFFA2CCA94F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12 里氏转换练习", "12 里氏转换练习\12 里氏转换练习.csproj", "{303080E2-2BCF-4A3B-876C-3CE80C4E779A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16 集合的两个练习", "16 集合的两个练习\16 集合的两个练习.csproj", "{F87E14EE-AABB-4460-A941-A6354C7EB4FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A1255502-E460-4B47-9052-9EFFA2CCA94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1255502-E460-4B47-9052-9EFFA2CCA94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1255502-E460-4B47-9052-9EFFA2CCA94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{303080E2-2BCF-4A3B-876C-3CE80C4E779A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303080E2-2BCF-4A3B-876C-3CE80C4E779A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303080E2-2BCF-4A3B-876C-3CE80C4E779A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303080E2-2BCF-4A3B-876C-3CE80C4E779A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87E14EE-AABB-4460-A941-A6354C7EB4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87E14EE-AABB-4460-A941-A6354C7EB4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87E14EE-AABB-4460-A941-A6354C7EB4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87E14EE-AABB-4460-A941-A6354C7EB4FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

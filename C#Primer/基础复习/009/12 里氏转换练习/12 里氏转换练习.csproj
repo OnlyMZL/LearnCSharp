@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A1255502-E460-4B47-9052-9EFFA2CCA94F}</ProjectGuid>
+    <ProjectGuid>{303080E2-2BCF-4A3B-876C-3CE80C4E779A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_10_继承练习</RootNamespace>
-    <AssemblyName>10 继承练习</AssemblyName>
+    <RootNamespace>_12_里氏转换练习</RootNamespace>
+    <AssemblyName>12 里氏转换练习</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Driver.cs" />
+    <Compile Include="Class\Meilv.cs" />
     <Compile Include="Class\Person.cs" />
+    <Compile Include="Class\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Class\Reporter.cs" />
-    <Compile Include="Class\Student.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
