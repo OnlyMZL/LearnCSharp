@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01 集合的3个练习", "01 集合的3个练习\01 集合的3个练习.csproj", "{77581F64-407E-4284-91F6-F936376ECB43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 File类", "02 File类\02 File类.csproj", "{49697EF7-4E9B-4640-A18F-5EF888A28ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 文件流", "03 文件流\03 文件流.csproj", "{C39D8721-6C12-44B6-A77C-58E9141974B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{77581F64-407E-4284-91F6-F936376ECB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77581F64-407E-4284-91F6-F936376ECB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77581F64-407E-4284-91F6-F936376ECB43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49697EF7-4E9B-4640-A18F-5EF888A28ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49697EF7-4E9B-4640-A18F-5EF888A28ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49697EF7-4E9B-4640-A18F-5EF888A28ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49697EF7-4E9B-4640-A18F-5EF888A28ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39D8721-6C12-44B6-A77C-58E9141974B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39D8721-6C12-44B6-A77C-58E9141974B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39D8721-6C12-44B6-A77C-58E9141974B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39D8721-6C12-44B6-A77C-58E9141974B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
