@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 虚方法练习", "03 �
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04 抽象类练习", "04 抽象类练习\04 抽象类练习.csproj", "{E59B1E47-63FC-4157-B167-9625A9BFB670}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 抽象类练习（模拟电脑插入移动存储设备）", "05 抽象类练习（模拟电脑插入移动存储设备）\05 抽象类练习（模拟电脑插入移动存储设备）.csproj", "{82654F4B-0757-461D-A622-2063BF5AD6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 简单工厂设计模式", "06 简单工厂设计模式\06 简单工厂设计模式.csproj", "{C9864651-687B-4237-A20F-DF81B25A26EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{E59B1E47-63FC-4157-B167-9625A9BFB670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E59B1E47-63FC-4157-B167-9625A9BFB670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E59B1E47-63FC-4157-B167-9625A9BFB670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82654F4B-0757-461D-A622-2063BF5AD6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82654F4B-0757-461D-A622-2063BF5AD6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82654F4B-0757-461D-A622-2063BF5AD6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82654F4B-0757-461D-A622-2063BF5AD6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9864651-687B-4237-A20F-DF81B25A26EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9864651-687B-4237-A20F-DF81B25A26EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9864651-687B-4237-A20F-DF81B25A26EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9864651-687B-4237-A20F-DF81B25A26EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
