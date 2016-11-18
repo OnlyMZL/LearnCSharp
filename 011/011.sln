@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05 抽象类练习（模拟
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06 简单工厂设计模式", "06 简单工厂设计模式\06 简单工厂设计模式.csproj", "{C9864651-687B-4237-A20F-DF81B25A26EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07 超市收银系统", "07 超市收银系统\07 超市收银系统.csproj", "{6DDD2709-42E3-45DA-8EE0-E464569F9F11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{C9864651-687B-4237-A20F-DF81B25A26EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9864651-687B-4237-A20F-DF81B25A26EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9864651-687B-4237-A20F-DF81B25A26EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDD2709-42E3-45DA-8EE0-E464569F9F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDD2709-42E3-45DA-8EE0-E464569F9F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDD2709-42E3-45DA-8EE0-E464569F9F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDD2709-42E3-45DA-8EE0-E464569F9F11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
