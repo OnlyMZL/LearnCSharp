@@ -47,6 +47,45 @@ namespace _03_简单记事本
             MessageBox.Show("保存成功");
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "admin" && textBox2.Text == "admin")
+            {
+                MessageBox.Show("登陆成功！");
+                label1.Visible = false;
+                label2.Visible = false;
+                textBox2.Visible = false;
+                textBox3.Visible = false;
+                button3.Visible = false;
+                button4.Visible = false;
 
+                textBox1.Visible = true;
+                button1.Visible = true;
+                button2.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("用户名或密码错误，请重新输入");
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox3.Focus();
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox3.Focus();
+            textBox1.Visible = false;
+            button1.Visible = false;
+            button2.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox3.Focus();
+        }
     }
 }
