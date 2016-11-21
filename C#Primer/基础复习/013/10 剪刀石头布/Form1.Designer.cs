@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPlayer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblJudge = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lblCpu = new System.Windows.Forms.Label();
+            this.btnStone = new System.Windows.Forms.Button();
+            this.btnCut = new System.Windows.Forms.Button();
+            this.btnBu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,91 +48,94 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "玩家出：";
             // 
-            // label2
+            // lblPlayer
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.lblPlayer.AutoSize = true;
+            this.lblPlayer.Location = new System.Drawing.Point(128, 48);
+            this.lblPlayer.Name = "lblPlayer";
+            this.lblPlayer.Size = new System.Drawing.Size(11, 12);
+            this.lblPlayer.TabIndex = 1;
+            this.lblPlayer.Text = " ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(193, 150);
+            this.label3.Location = new System.Drawing.Point(150, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.Size = new System.Drawing.Size(29, 12);
             this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.label3.Text = "裁判";
             // 
-            // label4
+            // lblJudge
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(260, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 12);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.lblJudge.AutoSize = true;
+            this.lblJudge.Location = new System.Drawing.Point(217, 108);
+            this.lblJudge.Name = "lblJudge";
+            this.lblJudge.Size = new System.Drawing.Size(11, 12);
+            this.lblJudge.TabIndex = 3;
+            this.lblJudge.Text = " ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(329, 48);
+            this.label5.Location = new System.Drawing.Point(266, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 4;
             this.label5.Text = "电脑出：";
             // 
-            // label6
+            // lblCpu
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(396, 48);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.lblCpu.AutoSize = true;
+            this.lblCpu.Location = new System.Drawing.Point(333, 48);
+            this.lblCpu.Name = "lblCpu";
+            this.lblCpu.Size = new System.Drawing.Size(11, 12);
+            this.lblCpu.TabIndex = 5;
+            this.lblCpu.Text = " ";
             // 
-            // button1
+            // btnStone
             // 
-            this.button1.Location = new System.Drawing.Point(111, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnStone.Location = new System.Drawing.Point(58, 163);
+            this.btnStone.Name = "btnStone";
+            this.btnStone.Size = new System.Drawing.Size(75, 23);
+            this.btnStone.TabIndex = 6;
+            this.btnStone.Text = "石头";
+            this.btnStone.UseVisualStyleBackColor = true;
+            this.btnStone.Click += new System.EventHandler(this.btnStone_Click);
             // 
-            // button2
+            // btnCut
             // 
-            this.button2.Location = new System.Drawing.Point(216, 239);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCut.Location = new System.Drawing.Point(163, 163);
+            this.btnCut.Name = "btnCut";
+            this.btnCut.Size = new System.Drawing.Size(75, 23);
+            this.btnCut.TabIndex = 7;
+            this.btnCut.Text = "剪刀";
+            this.btnCut.UseVisualStyleBackColor = true;
+            this.btnCut.Click += new System.EventHandler(this.btnCut_Click);
             // 
-            // button3
+            // btnBu
             // 
-            this.button3.Location = new System.Drawing.Point(321, 239);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBu.Location = new System.Drawing.Point(268, 163);
+            this.btnBu.Name = "btnBu";
+            this.btnBu.Size = new System.Drawing.Size(75, 23);
+            this.btnBu.TabIndex = 8;
+            this.btnBu.Text = "布";
+            this.btnBu.UseVisualStyleBackColor = true;
+            this.btnBu.Click += new System.EventHandler(this.btnBu_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 343);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(405, 237);
+            this.Controls.Add(this.btnBu);
+            this.Controls.Add(this.btnCut);
+            this.Controls.Add(this.btnStone);
+            this.Controls.Add(this.lblCpu);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblJudge);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -144,14 +147,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPlayer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblJudge;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblCpu;
+        private System.Windows.Forms.Button btnStone;
+        private System.Windows.Forms.Button btnCut;
+        private System.Windows.Forms.Button btnBu;
     }
 }
 
