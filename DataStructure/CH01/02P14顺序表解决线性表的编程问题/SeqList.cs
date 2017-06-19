@@ -81,7 +81,7 @@ namespace _02P14顺序表解决线性表的编程问题
                 length++;
             }
             else
-            { Console.WriteLine("ERROR! CHECK INPUT!"); }
+            { Console.WriteLine("ERROR! FULL!"); }
         }
         /// <summary>
         /// 向顺序表中插入数据元素
@@ -103,7 +103,7 @@ namespace _02P14顺序表解决线性表的编程问题
                     return;
                 }
             }
-            else if (i < 1 || i > length + 1)  //插入位置为第一位位，或插入位置在线性表长度的后两位
+            else if (i < 1 || i > length + 1)  //插入位置为负位，或插入位置在线性表长度的后两位
             {
                 Console.WriteLine("INVALID POSITION!");
                 return;
