@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01P5", "CH01\01P5.csproj", "{1C6621C7-4254-44DB-BA6D-F5F554D6881C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02P14顺序表解决线性表的编程问题", "02P14顺序表解决线性表的编程问题\02P14顺序表解决线性表的编程问题.csproj", "{767ED7F7-86FC-42A9-8B1E-EC8B662664BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1C6621C7-4254-44DB-BA6D-F5F554D6881C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C6621C7-4254-44DB-BA6D-F5F554D6881C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6621C7-4254-44DB-BA6D-F5F554D6881C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767ED7F7-86FC-42A9-8B1E-EC8B662664BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767ED7F7-86FC-42A9-8B1E-EC8B662664BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767ED7F7-86FC-42A9-8B1E-EC8B662664BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767ED7F7-86FC-42A9-8B1E-EC8B662664BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
