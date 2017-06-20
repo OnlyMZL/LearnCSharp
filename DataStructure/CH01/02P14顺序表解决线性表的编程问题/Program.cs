@@ -16,10 +16,11 @@ namespace _02P14顺序表解决线性表的编程问题
             l.InsertNode(3, 3);
             l.InsertNode(2, 4);
             l.InsertNode(1, 5);
-
             Console.WriteLine(l.SearchNodeBySeat(3));
             l.SearchNodeByValue(1);
             
+            
+
             Console.ReadLine();
 
 

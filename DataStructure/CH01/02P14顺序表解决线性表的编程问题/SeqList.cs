@@ -50,13 +50,13 @@ namespace _02P14顺序表解决线性表的编程问题
             {
                 Console.WriteLine("ERROR! EMPETY!");
             }
-            else if (i < 1 || i >= length) 
+            else if (i < 1 || i >= length)
             {
                 Console.WriteLine("INVALID POSITION!");
             }
             else
             {
-                for (int j = i-1; j < length; j++)
+                for (int j = i - 1; j < length; j++)
                 {
                     data[j] = data[j + 1];
                 }
@@ -70,7 +70,7 @@ namespace _02P14顺序表解决线性表的编程问题
         }
 
         /// <summary>
-        /// 向顺序表中插入数据元素，未规定插入位置，默认插入表末尾
+        /// 向顺序表中插入数据元素
         /// </summary>
         /// <param name="a">数据元素</param>
         public void InsertNode(T a)
@@ -83,10 +83,11 @@ namespace _02P14顺序表解决线性表的编程问题
             else
             { Console.WriteLine("ERROR! FULL!"); }
         }
+
         /// <summary>
         /// 向顺序表中插入数据元素
         /// </summary>
-        /// <param name="a">数据元素</param>
+        /// <param name="a">数据元素</param> 
         /// <param name="i">插入位置</param>
         public void InsertNode(T a, int i)
         {
@@ -133,19 +134,19 @@ namespace _02P14顺序表解决线性表的编程问题
         /// <param name="value">数据元素值</param>
         public void SearchNodeByValue(T value)
         {
-            int j=0;
-            int[] sData=new int[length];
+            int j = 0;
+            int[] sData = new int[length];
             for (int i = 0; i < length; i++)
             {
                 if (data[i].Equals(value))
                 {
-                    sData[j] = i+1;
+                    sData[j] = i + 1;
                     j++;
                 }
             }
             for (int i = 0; i < j; i++)
             {
-                if(j!=0)
+                if (j != 0)
                     Console.WriteLine(sData[i]);
                 else
                     Console.WriteLine("NO VALUE!");
