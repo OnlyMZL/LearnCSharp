@@ -28,20 +28,26 @@ namespace _002斐波那契数列
             try
             {
                 string input = textBox1.Text;
-                Tool.InputNum= Convert.ToInt32(input);
-                ShowForm frmShow = new ShowForm();
+                Tool.InputNum=Convert.ToInt32(input);  //参数传递
+                if(Tool.InputNum>46)
+                {
+                    MessageBox.Show("输入有误，请输入〇-->46的正整数！");
+                    return;
+                }
                 textBox1.Text = "";
                 textBox1.Focus();
-                Tool.F=this;
+                Tool.F = this;  //窗体传递
                 Tool.F.Hide();
+                ShowForm frmShow = new ShowForm();
                 frmShow.Show();
             }
             catch (Exception)
             {
-                MessageBox.Show("输入有误，请输入大于〇的正整数！");
+                MessageBox.Show("输入有误，请输入〇-->46的正整数！");
                 textBox1.Text = null;
                 textBox1.Focus();
             }
         }
+
     }
 }

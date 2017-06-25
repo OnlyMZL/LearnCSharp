@@ -12,7 +12,7 @@ namespace _002斐波那契数列
 {
     public partial class ShowForm : Form
     {
-        int[] n=new int[Tool.InputNum];
+        int[] n = new int[Tool.InputNum];  //声明集合存储数列
         public ShowForm()
         {
             InitializeComponent();
@@ -22,6 +22,10 @@ namespace _002斐波那契数列
             Feb(Tool.InputNum);
         }
 
+        /// <summary>
+        /// 显示数列前多少位
+        /// </summary>
+        /// <param name="i">数列前i位</param>
         public void Feb(int i)
         {
             if (i == 1)
@@ -29,19 +33,19 @@ namespace _002斐波那契数列
                 txtShow.Text = 1.ToString();
                 n[0] = 1;
             }
-            else if(i==2)
+            else if (i == 2)
             {
-                txtShow.Text = "1,\n1";
+                txtShow.Text = "1,\r\n1";
             }
-            else if(i>=3)
+            else if (i >= 3)
             {
                 n[0] = 1;
                 n[1] = 1;
-                txtShow.Text = "1,\n1";
-                for (int j = 3; j <= i ; j++)
+                txtShow.Text = "1,\r\n1";
+                for (int j = 3; j <= i; j++)
                 {
-                    n[j-1] = n[j-2]+n[j-3];
-                    txtShow.Text+=",\n"+n[j-1].ToString();
+                    n[j - 1] = n[j - 2] + n[j - 3];
+                    txtShow.Text += ",\r\n" + n[j - 1].ToString();
                 }
             }
         }
