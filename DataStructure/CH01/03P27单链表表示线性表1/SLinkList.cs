@@ -32,7 +32,7 @@ namespace _03P27单链表表示线性表
             else   //非空表时
             {
                 SNode<T> current = start;
-                while (current.Next == null)
+                while (current.Next != null)
                 {
                     current = current.Next;
                 }
@@ -65,7 +65,6 @@ namespace _03P27单链表表示线性表
             }
             else  //在表中插入
             {
-                
                 current = start;
                 previous = null;
                 int j = 1;
