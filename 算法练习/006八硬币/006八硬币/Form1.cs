@@ -122,6 +122,7 @@ namespace _006八硬币
             if (flag == 0)
             {
                 MessageBox.Show("请先生成硬币！");
+                return;
             }
             FindEBCoin(coinTemp);
             //else
