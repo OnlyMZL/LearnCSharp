@@ -10,7 +10,7 @@ namespace _17_ref参数
     {
         static void Main(string[] args)
         {
-            //用方法来交换两个参数的值
+            //来交换两个参数的值
             int n1 = 9;
             int n2 = 20;
             ExchangePara(ref n1,ref n2);
@@ -29,6 +29,8 @@ namespace _17_ref参数
             n1 = n1 - n2;
             n2 = n1 + n2;
             n1 = n2 - n1;
+			
+			
         }
     }
 }
