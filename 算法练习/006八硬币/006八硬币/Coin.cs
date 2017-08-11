@@ -8,24 +8,24 @@ namespace _006八硬币
 {
     public class Coin
     {
-        private double weight;
+        private double _weight;
         public double Weight
         {
             get { return weight; }
             set { weight = value; }
         }
 
-        private string type;
+        private string _type;
         public string Type
         {
             get { return type; }
             set { type = value; }
         }
 
-        public Coin(double wei, string typ)
+        public Coin(double weight, string type)
         {
-            Weight = wei;
-            Type = typ;
+            Weight = weight;
+            Type = type;
         }
     }
 }
