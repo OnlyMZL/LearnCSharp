@@ -8,23 +8,19 @@ namespace _007扫地机器人路径计算
 {
     class Program
     {
-        static int count = 0;
-        static int moveNum = 12;
+        //机器人走路问题：
+        //1、上下左右四种移动方式，并且不能往回走。
+        //2、计算机器人移动x步的可行路径总数。
+
+
+        static int count = 0;  //计数器
+        static int moveNum = 2;  //移动步数
         static void Main(string[] args)
         {
 
-            int[,] space = new int[100, 100];
+            int[,] space = new int[101, 101];  //声明一个二维数组，存放移动状态。使用默认值0表示可走状态。
 
-
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    space[i, j] = 0;
-                }
-            }
-
-            Move(space,moveNum, 50, 50);
+            Move(space,moveNum, 50, 50);  //机器人移动的初始位置为网格中心
 
             Console.WriteLine(count);
             Console.ReadLine();
@@ -56,7 +52,9 @@ namespace _007扫地机器人路径计算
                 {
                     Move(space, moveNum - 1, i - 1, j);
                 }
+
                 space[i, j] = 0;
+
                 if (moveNum==0)
                 {
                     count++;
