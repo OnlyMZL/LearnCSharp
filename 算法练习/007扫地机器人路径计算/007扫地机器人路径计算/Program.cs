@@ -53,8 +53,9 @@ namespace _007扫地机器人路径计算
                     Move(space, moveNum - 1, i - 1, j);
                 }
 
+                //将上一步的状态复0
                 space[i, j] = 0;
-
+                //判断是否走完x步
                 if (moveNum==0)
                 {
                     count++;
