@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003 模板方法", "委托\003 模板方法.csproj", "{AB51D150-E3B2-438F-BB65-2C467D41850D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "004 回调方法", "回调方法\004 回调方法.csproj", "{0E922463-16AB-4F88-B590-BAD6F82769EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "001 Action和Func", "Action和Func\001 Action和Func.csproj", "{59D77B22-5A99-4504-B650-2F173D026DB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "002 自定义委托", "自定义委托\002 自定义委托.csproj", "{D29C2B88-B082-4339-9691-04792E127065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005 多播委托", "005 多播委托\005 多播委托.csproj", "{41655D57-8CA8-4D0D-ABC8-03CC329F49FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "005-1 同步和异步", "005-1 同步和异步\005-1 同步和异步.csproj", "{8972B55D-EE03-4FB3-9764-D2A4E3FE24A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "006 使用借口代替委托", "006 使用借口代替委托\006 使用借口代替委托.csproj", "{D4F3A6C0-3F7F-46C0-88D1-58765D1A949F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB51D150-E3B2-438F-BB65-2C467D41850D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB51D150-E3B2-438F-BB65-2C467D41850D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB51D150-E3B2-438F-BB65-2C467D41850D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB51D150-E3B2-438F-BB65-2C467D41850D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E922463-16AB-4F88-B590-BAD6F82769EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E922463-16AB-4F88-B590-BAD6F82769EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E922463-16AB-4F88-B590-BAD6F82769EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E922463-16AB-4F88-B590-BAD6F82769EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D77B22-5A99-4504-B650-2F173D026DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D77B22-5A99-4504-B650-2F173D026DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D77B22-5A99-4504-B650-2F173D026DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D77B22-5A99-4504-B650-2F173D026DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29C2B88-B082-4339-9691-04792E127065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29C2B88-B082-4339-9691-04792E127065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29C2B88-B082-4339-9691-04792E127065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29C2B88-B082-4339-9691-04792E127065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41655D57-8CA8-4D0D-ABC8-03CC329F49FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41655D57-8CA8-4D0D-ABC8-03CC329F49FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41655D57-8CA8-4D0D-ABC8-03CC329F49FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41655D57-8CA8-4D0D-ABC8-03CC329F49FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8972B55D-EE03-4FB3-9764-D2A4E3FE24A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8972B55D-EE03-4FB3-9764-D2A4E3FE24A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8972B55D-EE03-4FB3-9764-D2A4E3FE24A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8972B55D-EE03-4FB3-9764-D2A4E3FE24A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4F3A6C0-3F7F-46C0-88D1-58765D1A949F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F3A6C0-3F7F-46C0-88D1-58765D1A949F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F3A6C0-3F7F-46C0-88D1-58765D1A949F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F3A6C0-3F7F-46C0-88D1-58765D1A949F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
